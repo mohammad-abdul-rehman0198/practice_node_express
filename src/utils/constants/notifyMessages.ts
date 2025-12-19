@@ -1,0 +1,15 @@
+export const NOTIFY_MESSAGES = {
+  UNAUTHORIZED: "Unauthorized.",
+  SERVER_ERROR: "Server error.",
+  LOGIN_SUCCESSFUL: "Login successful.",
+  SIGNUP_SUCCESSFUL: "Signup successful.",
+  LOGOUT_SUCCESSFUL: "Logout successful.",
+  TODO_CREATED: "Todo created.",
+  TODO_UPDATED: "Todo updated.",
+  TODO_DELETED: "Todo deleted.",
+  TODO_STATUS_TOGGLED: "Todo status toggled.",
+  TODO_NOT_FOUND: "Todo not found.",
+  ALL_FIELDS_REQUIRED: "All fields are required.",
+  EMAIL_ALREADY_EXISTS: "Email already exists.",
+  SIGNUP_FAILED: "Signup failed.",
+};
