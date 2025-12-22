@@ -1,6 +1,6 @@
 export const NOTIFY_MESSAGES = {
   UNAUTHORIZED: "Unauthorized.",
-  SERVER_ERROR: "Server error.",
+  SERVER_ERROR: "Internal server error.",
   LOGIN_SUCCESSFUL: "Login successful.",
   SIGNUP_SUCCESSFUL: "Signup successful.",
   LOGOUT_SUCCESSFUL: "Logout successful.",

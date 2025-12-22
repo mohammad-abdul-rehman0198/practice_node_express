@@ -5,15 +5,16 @@ import cors from "cors";
 import express from "express";
 import cookieParser from "cookie-parser";
 
+import { setupSwagger } from "@/swagger";
 import { userRouter } from "@/routes/user/userRoute";
 import { todoRouter } from "@/routes/todo/todoRoute";
+
 
 const app = express();
 
 const corsOptions = {
   origin: process.env["CLIENT_URL"],
   methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
 };
 
@@ -23,9 +24,12 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(cors(corsOptions));
 
-app.use("/user", userRouter);
-app.use("/todo", todoRouter);
+app.use("/users", userRouter);
+app.use("/todos", todoRouter);
+
+setupSwagger(app);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
+  console.log(`Swagger is running on http://localhost:${PORT}/api-docs`);
 });

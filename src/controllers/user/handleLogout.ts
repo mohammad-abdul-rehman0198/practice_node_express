@@ -10,7 +10,7 @@ export const handleLogout = async (req: Request, res: Response) => {
     const { error } = await supabase.auth.signOut();
 
     if (error) {
-      return res.status(400).json({
+      return res.status(401).json({
         success: false,
         message: error.message,
       });

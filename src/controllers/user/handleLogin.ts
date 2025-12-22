@@ -23,7 +23,7 @@ export const handleLogin = async (req: Request, res: Response) => {
     });
 
     if (error) {
-      return res.status(400).json({
+      return res.status(401).json({
         success: false,
         message: error.message,
       });

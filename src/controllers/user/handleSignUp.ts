@@ -51,7 +51,7 @@ export const handleSignup = async (req: Request, res: Response) => {
     });
 
     if (error) {
-      return res.status(400).json({
+      return res.status(401).json({
         success: false,
         message: error.message || NOTIFY_MESSAGES.SIGNUP_FAILED,
       });
