@@ -8,6 +8,7 @@ import { RequestWithUserId } from "@/utils/interfaces/requestWithUserId";
 
 export const handleGetAllTodos = async (req: Request, res: Response) => {
   try {
+    debugger;
     const userId = (req as RequestWithUserId).userId;
 
     if (!userId) {

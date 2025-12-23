@@ -12,4 +12,10 @@ export const NOTIFY_MESSAGES = {
   ALL_FIELDS_REQUIRED: "All fields are required.",
   EMAIL_ALREADY_EXISTS: "Email already exists.",
   SIGNUP_FAILED: "Signup failed.",
+  PASSWORD_RESET_EMAIL_SENT: "Password reset email sent.",
+  PASSWORD_RESET_EMAIL_NOT_SENT: "Password reset email not sent.",
+  PASSWORD_RESET_FAILED: "Password reset failed.",
+  PASSWORD_RESET_SUCCESS: "Password reset successful.",
+  PROFILE_UPDATE_FAILED: "Profile update failed.",
+  PROFILE_UPDATED_SUCCESS: "Profile updated successfully.",
 };

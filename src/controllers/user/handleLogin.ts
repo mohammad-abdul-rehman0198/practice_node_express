@@ -31,14 +31,16 @@ export const handleLogin = async (req: Request, res: Response) => {
 
     res.cookie("sb-access-token", data.session?.access_token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: false,
       sameSite: "lax",
+      path: "/",
     });
 
     res.cookie("sb-refresh-token", data.session?.refresh_token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: false,
       sameSite: "lax",
+      path: "/",
     });
 
     return res.status(200).json({
