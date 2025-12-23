@@ -2,7 +2,6 @@ import { Request, Response } from "express";
 
 import { createSupabaseServer } from "@/db/supabase/server";
 import { NOTIFY_MESSAGES } from "@/utils/constants/notifyMessages";
-import { RequestWithUserId } from "@/utils/interfaces/requestWithUserId";
 
 export const handleResetPassword = async (req: Request, res: Response) => {
   try {
