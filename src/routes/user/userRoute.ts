@@ -13,9 +13,9 @@ import { handleSendResetPasswordEmail } from "@/controllers/user/handleSendReset
 
 router.post("/login", handleLogin);
 router.post("/signup", handleSignup);
-router.post("/reset-password",authMiddleware, handleResetPassword);
 router.post("/logout", authMiddleware, handleLogout);
 router.get("/get-user", authMiddleware, handleGetUser);
+router.post("/reset-password",authMiddleware, handleResetPassword);
 router.put("/update-profile", authMiddleware, handleUpdateProfile);
 router.post("/send-reset-password-email", handleSendResetPasswordEmail);
 

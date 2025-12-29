@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 
 import { db } from "@/db/index";
+import gemini from "@/gemini/index";
 import { todos } from "@/db/schemas/todo";
 import { NOTIFY_MESSAGES } from "@/utils/constants/notifyMessages";
 import { RequestWithUserId } from "@/utils/interfaces/requestWithUserId";
@@ -16,6 +17,11 @@ export const handleCreateTodo = async (req: Request, res: Response) => {
         message: NOTIFY_MESSAGES.UNAUTHORIZED,
       });
     }
+  
+    const embedding = await gemini.models.embedContent({
+      contents: taskName + " " + description,
+      model: process.env.GEMINI_EMBEDDING_MODEL || "",
+    });
 
     const [newTodo] = await db
       .insert(todos)
@@ -24,6 +30,7 @@ export const handleCreateTodo = async (req: Request, res: Response) => {
         taskName,
         description,
         status: status || false,
+        embedding: embedding.embeddings?.[0].values as number[],
         createdBy: userId,
         createdAt: new Date(),
       })

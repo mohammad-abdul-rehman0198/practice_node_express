@@ -1,4 +1,4 @@
-import { pgTable, uuid, text, boolean, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, uuid, text, boolean, timestamp, vector } from "drizzle-orm/pg-core";
 
 import { users } from "@/db/schemas/user";
 
@@ -10,6 +10,7 @@ export const todos = pgTable("todos", {
   taskName: text("task_name").notNull(),
   description: text("description"),
   status: boolean("status").notNull().default(false), 
+  embedding: vector("embedding", { dimensions: 768 }).notNull(),
   createdBy: uuid("created_by")
     .notNull()
     .references(() => users.id),
