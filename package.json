@@ -30,6 +30,7 @@
     "express": "^5.2.1",
     "express-session": "^1.18.2",
     "nodemon": "^3.1.11",
+    "openai": "^6.15.0",
     "pg": "^8.16.3",
     "postgres": "^3.4.7",
     "swagger-jsdoc": "^6.2.8",

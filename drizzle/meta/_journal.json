@@ -8,6 +8,27 @@
       "when": 1766993623343,
       "tag": "0000_friendly_silhouette",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1767083638068,
+      "tag": "0001_pretty_living_lightning",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1767093537005,
+      "tag": "0002_silky_killraven",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1767094909953,
+      "tag": "0003_quiet_warbound",
+      "breakpoints": true
     }
   ]
 }
