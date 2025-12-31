@@ -95,13 +95,13 @@ export const handleChatbot = async (req: Request, res: Response) => {
                 You are a helpful todo assistant.
                 User Question:  ${message}   
                 Relevant Todos: ${context} 
-                instructions:
-                - Make sure to respond in the same language as the user's question.
-                - If in relevant todos apear irrelevant todos according to user's question appear than ignore them.
-                - If the user's question is not related to todos, respond with "I'm sorry, I can only help with Todo Application."
-                - If the user's question is not clear, respond with "I'm sorry, I didn't understand your question. Please try again."
-                - In response, provide the title, description, status, created at.
-                - If user ask question about related delete todo than add in response delete at.
+                Instructions:
+                  - Make sure to respond in the same language as the user's question.
+                  - If in relevant todos apear irrelevant todos according to user's question appear than ignore them.
+                  - If the user's question is not related to todos, respond with "I'm sorry, I can only help with Todo Application."
+                  - If the user's question is not clear, respond with "I'm sorry, I didn't understand your question. Please try again."
+                  - In response, provide the title, description, status, created at.
+                  - If user ask question about related delete todo than add in response delete at.
           `,
         },
       ],
