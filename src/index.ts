@@ -8,6 +8,7 @@ import cookieParser from "cookie-parser";
 import { setupSwagger } from "@/swagger";
 import { userRouter } from "@/routes/user/userRoute";
 import { todoRouter } from "@/routes/todo/todoRoute";
+import { chatbotRouter } from "@/routes/chatbot/chatbotRoute";
 
 
 const app = express();
@@ -26,6 +27,7 @@ app.use(cors(corsOptions));
 
 app.use("/users", userRouter);
 app.use("/todos", todoRouter);
+app.use("/chatbot", chatbotRouter);
 
 setupSwagger(app);
 

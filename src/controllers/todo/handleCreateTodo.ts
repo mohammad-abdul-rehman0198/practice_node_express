@@ -34,7 +34,8 @@ export const handleCreateTodo = async (req: Request, res: Response) => {
       newTodo,
       message: NOTIFY_MESSAGES.TODO_CREATED,
     });
-  } catch {
+  } catch (error) {
+    console.log(error);
     return res.status(500).json({
       success: false,
       message: NOTIFY_MESSAGES.SERVER_ERROR,

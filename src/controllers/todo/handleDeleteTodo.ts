@@ -17,7 +17,7 @@ export const handleDeleteTodo = async (req: Request, res: Response) => {
         message: NOTIFY_MESSAGES.UNAUTHORIZED,
       });
     }
-
+ 
     const [existingTodo] = await db
       .select()
       .from(todos)
